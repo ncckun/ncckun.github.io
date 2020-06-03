@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>top画面</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <p id="app_name" style="text-align: center;">SkyWay ChatApp</p>
+
+        <div id="box">
+            <p class="input_line">
+                SELECT ROOM
+
+                <select id="select_room"> 
+                    <option value="HELL">HELL</option>
+                    <option value="UTUSIYO">UTUSIYO</option>
+                    <option value="HEAVEN">HEAVEN</option>
+                </select>
+            </p>
+
+            <p class="input_line">
+                ROOM TYPE
+
+                <label><input type="radio" name="room_type" value="sfu" checked>sfu</label>
+                <label><input type="radio" name="room_type" value="mesh">mesh</label>
+               
+            </p>
+
+            <p>
+                <a href="chat.html" class="join_btn" onclick="set()">JOIN ROOM</a>
+            </p>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        function set()
+        {
+            //select要素から値を取得
+            var select_str = document.getElementById('select_room').value;
+            //送る
+            sessionStorage.setItem('name_key', select_str);
+
+            //ラジオボタンから値を取得
+            //ラジオボタングループ(room_type)を取得
+            var type_list = document.getElementsByName('room_type');
+            //
+            for(var i = 0; i < type_list.length; i++)
+            {
+                if(type_list[i].checked) 
+                {
+                    var radio_str = type_list[i].value;
+                }
+            }
+            //送る
+            sessionStorage.setItem('type_key',radio_str);
+        }
+    </script>
+</body>
