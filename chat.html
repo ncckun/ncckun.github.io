@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>chat画面</title>
+    <link rel="stylesheet" type="text/css" href="chat.css">
+</head>
+<body>
+    <h1 id="room_name">ROOM : </h1>
+    <h3 id="room_type">TYPE : </h3>
+    <h3 id="room_status">STATUS : </h3>
+    <h3 id="display_peer">デバック用 : </h3>
+    
+
+    <div id="box_left">
+        
+        <video id="local_stream" width="300"></video>
+        <div id="remote_streams"></div>
+
+        <div id="bt_box">
+            <input type="image" class="btn" id="bt_mute" src="images/icon_mute.png" alt="マイク">
+            <input type="image" class="btn" id="bt_exit" src="images/icon_exit.png" alt="退室">
+            <input type="image" class="btn" id="bt_camera" src="images/icon_camera.png" alt="カメラ">
+
+            <audio id="sound_file" preload="auto">
+                <source src="sound/cursor1.mp3" type="audio/mp3">
+                <!--<source src="http://〜.wav" type="audio/wav">-->
+            </audio>
+
+        </div>
+    </div>
+
+    <div id="box_right">
+        <p>謎スペース</p>
+    </div>  
+    
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="plus.js"></script>
+</body>
