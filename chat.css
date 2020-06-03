@@ -1,0 +1,50 @@
+html {height: 100%;}
+body {
+    background-color: #333333	;
+    color: white;
+    height: 100%;
+}
+#room_name {
+    text-decoration: underline;
+}
+#box_right {
+    background-color: #008080;
+    height: 100%;
+    width: 30%;
+    float: right;
+}
+#box_left {
+    height: 100%;
+    width: 65%;
+    float: left;
+    border: 2px solid #ffffff;
+
+    position: relative;
+}
+
+#bt_box {
+    /*margin: 10px  auto;*/
+    width: 80%;
+    border: 2px solid #ffffff;
+    text-align: center;
+    z-index:1;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    margin: auto;
+}
+.btn {
+    background-color: #fa8072;
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  40px;       /* ※縦横を同値に */
+    height: 40px;       /* ※縦横を同値に */
+    border: 2px solid #ffffff;
+    padding: 10px;
+    margin: 60px;
+    display: inline-block; 
+}
+#local_stream {
+    transform: scale(-1, 1);
+}
